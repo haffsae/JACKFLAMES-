@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>JACKFLAMES 🍈🔥</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         SOUND EFFECTS
+    ================================= -->
+
+    <audio
+        id="clickSound"
+        src="sounds/click.mp3"
+        preload="auto">
+    </audio>
+
+    <audio
+        id="loadingSound"
+        src="sounds/loading.mp3"
+        preload="auto">
+    </audio>
+
+    <audio
+        id="resultSound"
+        src="sounds/result.mp3"
+        preload="auto">
+    </audio>
+
+
+    <!-- ================================
+         BACKGROUND DECORATIONS
+    ================================= -->
+
+    <div class="bg-yellow"></div>
+
+    <div class="bg-green"></div>
+
+    <div class="bg-peach"></div>
+
+
+    <div class="decor-heart heart-one">
+        ♡
+    </div>
+
+    <div class="decor-heart heart-two">
+        ♡
+    </div>
+
+    <div class="decor-heart heart-three">
+        ✦
+    </div>
+
+
+    <div class="better-together">
+        Better<br>
+        Together ♡
+    </div>
+
+
+    <!-- ================================
+         MAIN CONTAINER
+    ================================= -->
+
+    <div class="container">
+
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <header>
+
+            <h1 class="logo">
+                🍈 JACK<span>FLAMES</span> 🔥
+            </h1>
+
+            <p class="tagline">
+                Where humans meet jackfruit! 😍💗
+            </p>
+
+            <p class="subtitle">
+                Discover your funny compatibility! ✨
+            </p>
+
+        </header>
+
+
+        <!-- ================================
+             PHOTO UPLOAD SECTION
+        ================================= -->
+
+        <div class="upload-box">
+
+
+            <!-- PERSON -->
+
+            <div class="person">
+
+                <h3>
+                    👤 Person Photo
+                </h3>
+
+                <label class="upload-btn">
+
+                    🖼️ Choose Photo
+
+                    <input
+                        type="file"
+                        id="personPhoto"
+                        accept="image/*"
+                    >
+
+                </label>
+
+
+                <img
+                    id="personPreview"
+                    class="preview"
+                    alt="Person Preview"
+                >
+
+
+                <p class="upload-hint">
+                    Upload a person's photo
+                </p>
+
+            </div>
+
+
+            <!-- JACKFRUIT -->
+
+            <div class="person">
+
+                <h3>
+                     🍈Jackfruit Photo
+                </h3>
+
+                <label class="upload-btn">
+
+                    🖼️ Choose Photo
+
+                    <input
+                        type="file"
+                        id="jackfruitPhoto"
+                        accept="image/*"
+                    >
+
+                </label>
+
+
+                <img
+                    id="jackfruitPreview"
+                    class="preview"
+                    alt="Jackfruit Preview"
+                >
+
+
+                <p class="upload-hint">
+                    Upload your favourite jackfruit 🍈
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             NAME SECTION
+        ================================= -->
+
+        <div class="names">
+
+
+            <div class="input-group">
+
+                <label>
+                    👤 Person Name
+                </label>
+
+                <input
+                    type="text"
+                    id="personName"
+                    placeholder="Enter person's name"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                     🍈Jackfruit Name
+                </label>
+
+                <input
+                    type="text"
+                    id="jackfruitName"
+                    placeholder="Give your jackfruit a name"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             CALCULATE
+        ================================= -->
+
+        <button id="calculateBtn">
+            💖 Check Compatibility
+        </button>
+
+
+        <!-- ================================
+             LOADING
+        ================================= -->
+
+        <div
+            class="loading"
+            id="loading"
+        >
+
+            <div class="loader"></div>
+
+            <p>
+                Calculating your JackFlames... 🍈
+            </p>
+
+            <span>
+                Please wait...
+            </span>
+
+        </div>
+
+
+        <!-- ================================
+             RESULT
+        ================================= -->
+
+        <div
+            class="result"
+            id="result"
+        >
+
+
+            <h2
+                class="result-title"
+                id="resultTitle"
+            >
+                 🍈FRIENDS
+            </h2>
+
+
+            <!-- PERSON + JACKFRUIT RESULT PHOTOS -->
+
+            <div class="photos">
+
+                <img
+                    id="resultPerson"
+                    alt="Person"
+                >
+
+                <div id="heart">
+                    💗
+                </div>
+
+                <img
+                    id="resultJackfruit"
+                    alt="Jackfruit"
+                >
+
+            </div>
+
+
+            <!-- ================================
+                 AUTOMATIC RELATIONSHIP IMAGE
+            ================================= -->
+
+            <img
+                id="relationshipPicture"
+                src=""
+                alt="Relationship Result"
+                style="display:none;"
+            >
+
+
+            <p class="flames-label">
+                FLAMES Result
+            </p>
+
+
+            <div id="percentage">
+                Compatibility: 70% 😂
+            </div>
+
+
+            <p id="prediction">
+                Best buddies forever!
+                Jackfruit is your ultimate friend! 🥭😂
+            </p>
+
+
+            <p class="fun-message">
+                ✨ Friendship level:
+                JACKFRUIT BESTIES! ✨
+            </p>
+
+
+            <button
+                class="try-again"
+                onclick="location.reload()"
+            >
+                🔄 Try Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
